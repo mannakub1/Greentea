@@ -10,7 +10,8 @@
 
 int main() {
     
-    int order, income = 0, paid = 0;
+    int order, income = 0, paid = 0, money;
+    int count_income = 0, count_paid = 0 ;
     
     while(1) {
         scanf("%d", &order);
@@ -18,13 +19,19 @@ int main() {
             break;
         }
         
+        scanf("%d", &money);
         if( isIncome(order) ) {
-            
+            income += money;
+            count_income++;
         }else {
-            
+            paid += money;
+            count_paid++;
         }
         
     }
+    
+    printf("%d %d\n", count_income, count_paid);
+    printf("%d %d %d\n", income, paid, income - paid);
     return 0;
 }
 
