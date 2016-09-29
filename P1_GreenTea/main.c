@@ -10,6 +10,10 @@
 
 int main() {
     
-    printf("Hello, World!\n");
+    int order, income = 0, paid = 0;
+    
+    while(1) {
+        
+    }
     return 0;
 }
